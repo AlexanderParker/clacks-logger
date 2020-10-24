@@ -46,9 +46,14 @@ Thefore a payload will be logged to a file according to this pattern: "[base log
 The contents of the log file is a JSON string with the following format:
 
 	{
-		peer: {<[clacks peer object](https://github.com/AlexanderParker/clacks#peers)>}
-		payload: {<[clacks payload object](https://github.com/AlexanderParker/clacks#message-payload)>}
+		peer: {<peer object>}
+		payload: {<payload object>}
 	}
+
+For the format of the logged objects please refer to the primary clacks documentation accordingly:
+
+* **[peer](https://github.com/AlexanderParker/clacks#peers)** - outlines the clacks peer object structure.
+* **[payload](https://github.com/AlexanderParker/clacks#message-payload)** - outlines the clacks message payload structure.
 
 # Contributing
 
