@@ -1,0 +1,25 @@
+{
+  "name": "clacks-logger",
+  "version": "0.1.0",
+  "description": "Message logger plugin for clacks-p2p",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/AlexanderParker/clacks-logger.git"
+  },
+  "keywords": [
+    "clacks-p2p",
+    "logger",
+    "nodejs",
+    "p2p"
+  ],
+  "author": "Alex Parker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlexanderParker/clacks-logger/issues"
+  },
+  "homepage": "https://github.com/AlexanderParker/clacks-logger#readme"
+}
