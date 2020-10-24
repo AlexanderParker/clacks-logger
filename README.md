@@ -55,6 +55,10 @@ For the format of the logged objects please refer to the primary clacks document
 * **[peer](https://github.com/AlexanderParker/clacks#peers)** - outlines the clacks peer object structure.
 * **[payload](https://github.com/AlexanderParker/clacks#message-payload)** - outlines the clacks message payload structure.
 
+# Test Example
+
+You can view a test example in the [clacks-tests repository](https://github.com/AlexanderParker/clacks-tests/blob/main/plugins/clacks-logger.js).
+
 # Contributing
 
 If this project interests you, all contributions are welcome, from pull requests to suggestions and bug reports.
