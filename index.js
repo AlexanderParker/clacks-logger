@@ -10,22 +10,31 @@ const fs = require('fs')
 	Options format:
 	{
 		directory: 'base/log/directory',
-		type: 'message|announce|all'
+		type: 'message|announce|all',
+		prefix: 'filename-prefix',
+		suffix: 'filename-suffix'
 	}
 
 	Default options:
 
 	directory: "./logger"
 	type: "./all"
+	prefix: ""
+	suffix: ""
+
 */
 
 module.exports = function(options) {
 	var logDirectory = "./logger",
-		logType = "all"
+		logType = "all",
+		filenamePrefix = "",
+		filenameSuffix = ""
 
 	// Apply options overrides
 	if (!!options && !!options.directory) logDirectory = options.directory
-	if (!!options && !!options.type) logDirectory = options.type
+	if (!!options && !!options.type) logType = options.type
+	if (!!options && !!options.prefix) filenamePrefix = options.prefix
+	if (!!options && !!options.suffix) filenameSuffix = options.suffix
 
 	// Check logger directory
 	if (!fs.existsSync(logDirectory)) {
@@ -40,8 +49,8 @@ module.exports = function(options) {
 		if (logType != 'all' && (!payload.type || payload.type != logType)) return
 
 		// Message is logged to filesystem in logir/identifier/timestamp
-		var peerLogDirectory = logDirectory + '/' + peer.identifier
-			peerLogFilename = Date.now()
+		var peerLogDirectory = logDirectory + '/' + peer.identifier,
+			peerLogFilename = filenamePrefix + Date.now() + filenameSuffix
 
 		// Ensure log directory exists (is sync for now, may improve later)
 		if (!fs.existsSync(peerLogDirectory)) {
