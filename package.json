@@ -1,6 +1,6 @@
 {
   "name": "clacks-logger",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Message logger plugin for clacks-p2p",
   "main": "index.js",
   "scripts": {    
